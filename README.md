@@ -29,3 +29,5 @@ npm install
 # Install backend dependencies
 cd server
 npm install
+```
+## Click here: https://donation-app-bn88.onrender.com/
