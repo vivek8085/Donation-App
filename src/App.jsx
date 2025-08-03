@@ -11,7 +11,7 @@ function App() {
 
 
 useEffect(() => {
-  fetch("http://localhost:5000/api/leaderboard")
+  fetch("https://backend-5rj2.onrender.com/api/leaderboard")
     .then((res) => res.json())
     .then((data) => setLeaderboard(data));
 }, []);
@@ -19,7 +19,7 @@ useEffect(() => {
 
 const handleLogin = async (loginData) => {
   try {
-    const res = await fetch("http://localhost:5000/api/login", {
+    const res = await fetch("https://backend-5rj2.onrender.com/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(loginData)
@@ -30,7 +30,7 @@ const handleLogin = async (loginData) => {
       setUser(data.user);
       setPage("dashboard");
       // Refresh leaderboard
-      fetch("http://localhost:5000/api/leaderboard")
+      fetch("https://backend-5rj2.onrender.com/api/leaderboard")
         .then((res) => res.json())
         .then((data) => setLeaderboard(data));
     } else {
@@ -44,7 +44,7 @@ const handleLogin = async (loginData) => {
 
 const handleSignup = async (signupData) => {
   try {
-    const res = await fetch("http://localhost:5000/api/signup", {
+    const res = await fetch("https://backend-5rj2.onrender.com/api/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(signupData)
@@ -55,7 +55,7 @@ const handleSignup = async (signupData) => {
       setUser(data.user);
       setPage("dashboard");
       // Refresh leaderboard
-      fetch("http://localhost:5000/api/leaderboard")
+      fetch("https://backend-5rj2.onrender.com/api/leaderboard")
         .then((res) => res.json())
         .then((data) => setLeaderboard(data));
     } else {
